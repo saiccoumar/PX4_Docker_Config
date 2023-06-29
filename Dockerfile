@@ -64,9 +64,10 @@ RUN sudo apt update && sudo apt upgrade -y
 RUN DEBIAN_FRONTEND=noninteractive sudo apt install -y ros-humble-desktop 
 RUN  yes | bash /install_scripts/ros2.sh  && /docker_clean.sh
 
-#RUN yes | bash /install_scripts/gedit.sh && /docker_clean.sh
+RUN yes | bash /install_scripts/gedit.sh && /docker_clean.sh
+RUN yes | bash /install_scripts/xeyes.sh && /docker_clean.sh
 RUN yes | bash /install_scripts/vim.sh && /docker_clean.sh
-RUN yes | bash /install_scripts/gazebo_garden_zp.sh && /docker_clean.sh
+RUN yes | bash /install_scripts/gazebo_garden.sh && /docker_clean.sh
 
 
 # add groups before we do anything that might add a new group

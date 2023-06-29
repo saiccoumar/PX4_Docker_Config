@@ -34,3 +34,5 @@ docker stop hummingbird
 docker ps -a
 ```
 
+#### Original Work: https://github.com/zp-yang/visnet-docker. 
+#### I modified it and updated the scripts generalize the use and to match the PX4 ROS2 user guide found here: https://docs.px4.io/main/en/ros/ros2_comm.html

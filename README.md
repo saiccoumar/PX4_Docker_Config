@@ -28,6 +28,8 @@ If you're using Windows or MacOS run this command. You can find your ip by typin
 docker run -it --env="DISPLAY=<your ip>:0" --name=hummingbird uav
 ```
 
+If the script repeatedly fails on px4.sh or ros2wkspc.sh you can comment these sections out, build the docker image, and then download PX4 and the PX4 ROS2 workspace manually. This should help with debugging any unexplained errors and you can do hot fix commands intermittently to get the same final output setup.
+
 ## Container Management. 
 ### If you exit out of the docker container in terminal you can re-enter with 'docker exec'
 ``` bash

@@ -114,7 +114,7 @@ Once you select your container VSC should open a window so you can develop on th
 ## Starting Your First Project:
 ### Run the Microagent:
 ``` bash
-MicroXRCEAgent udp4 -p 888
+MicroXRCEAgent udp4 -p 8888
 ```
 ### Start Gazebo:
 Run default:

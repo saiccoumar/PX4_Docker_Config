@@ -23,9 +23,14 @@ This makes a docker container based off of the custom docker image. -it prevents
 ``` bash
 docker run -it --env="DISPLAY=:0" --name=hummingbird uav
 ```
-If you're using Windows or MacOS run this command. You can find your ip by typing 'ipconfig' in the terminal:
+If you're using Windows run this command. You can find your ip by typing 'ipconfig' in the terminal:
 ``` bash
 docker run -it --env="DISPLAY=<your ip>:0" --name=hummingbird uav
+```
+
+If you're using MacOS run this command. 
+``` bash
+docker run -it --net=host --privileged --env="DISPLAY=host.docker.internal:0" --name=hummingbird uav
 ```
 
 If the script repeatedly fails on px4.sh or ros2wkspc.sh you can comment these sections out, build the docker image, and then download PX4 and the PX4 ROS2 workspace manually. This should help with debugging any unexplained errors and you can do hot fix commands intermittently to get the same final output setup.
@@ -87,7 +92,21 @@ While there might be another built in way to do this, I keep task manager open a
 
 ### MacOS X11 Server setup:
 In progress. The recommended Xserver software is Xquartz.
-### Step 1: Download a X11 server implementation. The download can be found here: https://www.xquartz.org/.
+### Step 1: Download a X11 server implementation. 
+The download can be found here: https://www.xquartz.org/.
+### Step 2: Go to Settings >  Preferences and check Allow connections from network clients. Then restart Xquartz.
+![image](https://github.com/saiccoumar/PX4_Docker_Config/assets/55699636/73964c94-1dff-44fe-9036-fd748d5a725f)
+### Step 3: run xhost in terminal.
+This opens up the host machine to recieve display data from the docker container via the localhost network. 
+``` bash
+xhost +local
+```
+### Step 4: Run docker run
+``` bash
+docker run -it --net=host --privileged --env="DISPLAY=host.docker.internal:0" --name=hummingbird uav
+```
+### Closing the Xserver:
+MacOS should automatically close the Xserver when Xquartz is shut down. You can run 'xhost -local' to undo the hosting access you gave to your network from your computer to be safe. 
 
 ## Connecting Visual Studio Code to the Docker container:
 If you have visual studio code on the host machine, you can directly develop on the docker container. I found it to be objectively the best experience for development on the container and it doesn't consume container resources heavily as using an IDE on the container.

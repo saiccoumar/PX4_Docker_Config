@@ -110,16 +110,16 @@ Once you select your container VSC should open a window so you can develop on th
 ![GetImage](https://github.com/saiccoumar/PX4_Docker_Config/assets/55699636/d0f1116d-d131-4911-85a0-cbdd963bc35d)
 
 ## Starting Your First Project:
-### Run the Microagent
+### Run the Microagent:
 ``` bash
 MicroXRCEAgent udp4 -p 888
 ```
-### Start Gazebo
+### Start Gazebo:
 Run default:
 ``` bash
 make px4_sitl gz_x500 
 ```
-Copying a custom environment into PX4
+Copying a custom environment into PX4:
 ``` bash
 docker cp <source_file> <docker_container_id>:/home/user/Work/PX4/Tools/simulation/gz/worlds/<source_file>
 ```
@@ -127,7 +127,7 @@ Run Advanced Settings:
 ``` bash
 PX4_SYS_AUTOSTART=4001 PX4_GZ_MODEL=x500 PX4_GZ_WORLD=model ./build/px4_sitl_default/bin/px4 
 ```
-### Start ROS2 
+### Start ROS2:
 ```bash
 source /opt/ros/humble/setup.bash  
 source install/local_setup.bash  

@@ -4,7 +4,7 @@ A custom dockerfile designed to containerize PX4 on Ubuntu 22.04 with ROS2 and G
 
 Sections: <br />
 [Features](##Features)<br />
-
+[Build Instructions](##Build_Instructions)<br />
 ## Features:
 * Preinstalls ROS2, PX4, and Gazebo Garden
 * Creates an organized workspace ready for PX4 Development with dependency management

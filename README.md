@@ -87,6 +87,7 @@ While there might be another built in way to do this, I keep task manager open a
 
 ### MacOS X11 Server setup:
 In progress. The recommended Xserver software is Xquartz.
+### Step 1: Download a X11 server implementation. The download can be found here: https://www.xquartz.org/.
 
 ## Connecting Visual Studio Code to the Docker container:
 If you have visual studio code on the host machine, you can directly develop on the docker container. I found it to be objectively the best experience for development on the container and it doesn't consume container resources heavily as using an IDE on the container.

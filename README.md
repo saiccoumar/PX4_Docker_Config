@@ -123,7 +123,7 @@ make px4_sitl gz_x500
 ```
 Copying a custom environment into PX4:
 ``` bash
-docker cp <source_file> <docker_container_id>:/home/user/Work/PX4/Tools/simulation/gz/worlds/<source_file>
+docker cp <source_file> <docker_container_id>:/home/user/work/PX4-Autopilot/Tools/simulation/gz/worlds/<source_file>
 ```
 Run Advanced Settings:
 ``` bash

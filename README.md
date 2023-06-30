@@ -42,20 +42,19 @@ X11 forwarding is a feature that allows the graphical user interface of an appli
 
 ### Windows X11 Server setup:
 ### Step 1: Download a X11 server implementation. Many sites recommended Xming but this did NOT work for me and the distribution hasn't been updated since 2013. Instead I used VcXSrv. It can be downloaded here: https://sourceforge.net/projects/vcxsrv/
-### Step 2: Starting an Xserver: Launch XLaunch. This window should come up. Click next.
+### Step 2: Launch XLaunch. This window should come up. Click next.
 <p align="center">
 <img width="60%" height="auto" src="https://github.com/saiccoumar/PX4_Docker_Config/assets/55699636/8957d2fe-c769-44f0-901e-d9cc29eb110d">
 </p>
-Continue with Start no client and click next. 
-![image](https://github.com/saiccoumar/PX4_Docker_Config/assets/55699636/0f97d903-ab33-41aa-9fc9-15c13d989d16)
+### Step 3: Continue with Start no client and click next. 
 <p align="center">
 <img width="60%" height="auto" src="https://github.com/saiccoumar/PX4_Docker_Config/assets/55699636/8957d2fe-c769-44f0-901e-d9cc29eb110d">
 </p>
-In Extra settings click Disable access control as well as clipboard and Native opengl. 
+### Step 4: In Extra settings click Disable access control as well as clipboard and Native opengl. 
 <p align="center">
 <img width="60%" height="auto" src="https://github.com/saiccoumar/PX4_Docker_Config/assets/55699636/47d82115-4d4f-4c04-b761-2466e229ccd5">
 </p>
-Click Save Configuration and save it to your desktop. This way you won't need to redo the launch process and can start a server with the config shortcut. 
+### Step 5: Click Save Configuration and save it to your desktop. This way you won't need to redo the launch process and can start a server with the config shortcut. 
 <p align="center">
 <img width="60%" height="auto" src="https://github.com/saiccoumar/PX4_Docker_Config/assets/55699636/c0ced88b-b942-4b99-ae66-06234227f37b">
 </p>

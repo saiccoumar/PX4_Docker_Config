@@ -37,6 +37,11 @@ docker stop hummingbird
 ``` bash
 docker ps -a
 ```
+### If you see Vmmem wsl consuming a lot of memory after the docker container has been shut down but get a permission denied error when trying to shut it down, you can run the following command to kill wsl processes in Windows:
+``` bash
+wsl --shutdown
+```
+
 ## X11 Forwarding:
 X11 forwarding is a feature that allows the graphical user interface of an application running on a remote machine to be displayed on a local machine's display. It is required to use GUI applications on remote machines or containerized GUI applications. While using linux as your host OS, the X11 server is shared between the docker container and the host machine so no external configuration is required. On windows and MacOS this X11 server must be configured manually with third party software. 
 
@@ -46,20 +51,29 @@ X11 forwarding is a feature that allows the graphical user interface of an appli
 <p align="center">
 <img width="60%" height="auto" src="https://github.com/saiccoumar/PX4_Docker_Config/assets/55699636/8957d2fe-c769-44f0-901e-d9cc29eb110d">
 </p>
+
 ### Step 3: Continue with Start no client and click next. 
 <p align="center">
 <img width="60%" height="auto" src="https://github.com/saiccoumar/PX4_Docker_Config/assets/55699636/8957d2fe-c769-44f0-901e-d9cc29eb110d">
 </p>
+
 ### Step 4: In Extra settings click Disable access control as well as clipboard and Native opengl. 
 <p align="center">
 <img width="60%" height="auto" src="https://github.com/saiccoumar/PX4_Docker_Config/assets/55699636/47d82115-4d4f-4c04-b761-2466e229ccd5">
 </p>
+
 ### Step 5: Click Save Configuration and save it to your desktop. This way you won't need to redo the launch process and can start a server with the config shortcut. 
 <p align="center">
 <img width="60%" height="auto" src="https://github.com/saiccoumar/PX4_Docker_Config/assets/55699636/c0ced88b-b942-4b99-ae66-06234227f37b">
 </p>
 
+### Closing the Xserver: While there might be another built in way to do this, I keep task manager open and close the VcXsrv server through task manager. Watching task manager can help keep track of the high RAM usage that comes with Xservers. The Xserver will also shut down when the computer running it shuts down and does not automatically start up. 
+<p align="center">
+<img width="60%" height="auto" src="[https://github.com/saiccoumar/PX4_Docker_Config/assets/55699636/c0ced88b-b942-4b99-ae66-06234227f37b](https://github.com/saiccoumar/PX4_Docker_Config/assets/55699636/3b5074ad-54ff-4862-b11b-84dfa6c8e01d))">
+</p>
 
+### MacOS X11 Server setup:
+In progress. The recommended Xserver software is Xquartz.
 
 #### Original Work: https://github.com/zp-yang/visnet-docker. 
 #### I modified it and updated the scripts generalize the use and to match the PX4 ROS2 user guide found here: https://docs.px4.io/main/en/ros/ros2_comm.html

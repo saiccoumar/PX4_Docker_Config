@@ -37,12 +37,12 @@ docker stop hummingbird
 ``` bash
 docker ps -a
 ```
-##X11 Forwarding:
+## X11 Forwarding:
 X11 forwarding is a feature that allows the graphical user interface of an application running on a remote machine to be displayed on a local machine's display. It is required to use GUI applications on remote machines or containerized GUI applications. While using linux as your host OS, the X11 server is shared between the docker container and the host machine so no external configuration is required. On windows and MacOS this X11 server must be configured manually with third party software. 
 
-###Windows X11 Server setup:
-###Step 1: Download a X11 server implementation. Many sites recommended Xming but this did NOT work for me and the distribution hasn't been updated since 2013. Instead I used VcXSrv. It can be downloaded here: https://sourceforge.net/projects/vcxsrv/
-###Step 2: Starting an Xserver: Launch XLaunch. 
+### Windows X11 Server setup:
+### Step 1: Download a X11 server implementation. Many sites recommended Xming but this did NOT work for me and the distribution hasn't been updated since 2013. Instead I used VcXSrv. It can be downloaded here: https://sourceforge.net/projects/vcxsrv/
+### Step 2: Starting an Xserver: Launch XLaunch. 
 
 #### Original Work: https://github.com/zp-yang/visnet-docker. 
 #### I modified it and updated the scripts generalize the use and to match the PX4 ROS2 user guide found here: https://docs.px4.io/main/en/ros/ros2_comm.html

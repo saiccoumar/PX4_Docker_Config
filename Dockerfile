@@ -128,16 +128,9 @@ CMD ["/bin/bash"]
 
 # DOCKER COMMANDS: 
 # docker build -t uav .
-# docker run -it --env="DISPLAY=:0"  --env="QT_X11_NO_MITSHM=1"  --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" --env="XAUTHORITY=/tmp/.docker.xauth" --volume="/tmp/.docker.xauth:/tmp/.docker.xauth"  --net=host --privileged --name=hummingbird uav
-# docker run -it --env="DISPLAY=:0" --name=hummingbird uav
-# docker run -it --env="DISPLAY=:0" --name=hummingbird uav
-# docker run -v C:\Users\Sai\Work\UAV\Project\.gz:/home/user/.gz:rw -v C:\Users\Sai\Work\UAV\Project\work:/home/user/work:rw -e DISPLAY=:0 -it --name=hummingbird uav
-#  docker run --net=host --privileged -e DISPLAY=localhost:0  -v /tmp/.X11-unix:/tmp/.X11-unix -it --name=hummingbird uav    
-
+# docker run -it --env="<your ip>:0.0" --name=hummingbird uav
 # docker start hummingbird
 # docker exec -it hummingbird /bin/bash
 # docker stop hummingbird
 # docker ps -a
-# https://sourceforge.net/projects/xming/
 
-#docker run -it --rm --privileged -e DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix:ro $(DOCKER_IMAGE) xclock

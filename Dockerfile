@@ -128,7 +128,7 @@ CMD ["/bin/bash"]
 
 # DOCKER COMMANDS: 
 # docker build -t uav .
-# docker run -it --env="<your ip>:0.0" --name=hummingbird uav
+# docker run -it --env="DISPLAY=<your ip>:0.0" --name=hummingbird uav
 # docker start hummingbird
 # docker exec -it hummingbird /bin/bash
 # docker stop hummingbird

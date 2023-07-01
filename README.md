@@ -69,7 +69,7 @@ Launch XLaunch. This window should come up. Click next.
 ### Step 3: 
 Continue with Start no client and click next. 
 <p align="center">
-<img width="60%" height="auto" src="https://github.com/saiccoumar/PX4_Docker_Config/assets/55699636/8957d2fe-c769-44f0-901e-d9cc29eb110d">
+<img width="60%" height="auto" src="https://github.com/saiccoumar/PX4_Docker_Config/assets/55699636/6db95545-e2c5-4529-b831-189630cbf527">
 </p>
 
 ### Step 4: 

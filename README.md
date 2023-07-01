@@ -94,7 +94,7 @@ While there might be another built in way to do this, I keep task manager open a
 In progress. The recommended Xserver software is Xquartz.
 ### Step 1: Download a X11 server implementation. 
 The download can be found here: https://www.xquartz.org/.
-### Step 2: Go to Settings >  Preferences and check Allow connections from network clients. Then restart Xquartz.
+### Step 2: Go to Settings >  Security and check Allow connections from network clients. Then restart Xquartz.
 ![image](https://github.com/saiccoumar/PX4_Docker_Config/assets/55699636/73964c94-1dff-44fe-9036-fd748d5a725f)
 ### Step 3: run xhost in terminal.
 This opens up the host machine to recieve display data from the docker container via the localhost network. 
